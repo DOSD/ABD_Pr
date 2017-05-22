@@ -89,7 +89,7 @@
 
     <div class="input-group">
                 <span class="input-group-addon"><i class="glyphicon glyphicon-plus"></i></span>
-                <input type="number" min="15" placeholder="Edad" name="edad" id="edad" required="required">
+                <input type="number" min="0" placeholder="Edad" name="edad" id="edad" required="required">
     </div>
 
     <br width="50%">

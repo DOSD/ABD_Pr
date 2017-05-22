@@ -65,7 +65,3 @@ $(document).ready(function(){
     });
 });
 
-
-function getMensaje() {
-   document.getElementById("mensaje").value = "Fifth Avenue, New York City";
-}
