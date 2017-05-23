@@ -8,7 +8,6 @@
   else if($_SESSION['CurrentUser'] != "ADMIN"){
       header("Location: erroradmin.php");  
   }
-  }
   $db  = mysqli_connect('localhost','root','','abd_practica');
 
             if(isset($_POST["nombre"]) && isset($_POST ["genero"]) && isset($_POST ["edadminima"]) && isset($_POST ["edadmaxima"])){
