@@ -60,7 +60,7 @@
 
   <link rel="stylesheet" type="text/css" href="styles/style.css">
 
-
+  
     <title>Formulario de login</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1">

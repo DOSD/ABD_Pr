@@ -6,20 +6,15 @@
     if(isset($_POST["mensaje"])){  
 
         $db  = mysqli_connect('localhost','root','','abd_practica');
-         if (!$db){
-        echo "<script>alert('pene')</script>";
-       }
+         
         $mensaje = $_POST ["mensaje"];
         $currentPartener="ALL";
         $currentUser=$_SESSION['CurrentUser'];
         
         $consulta="SELECT * FROM mensaje";
-        $nummensajes=mysqli_num_rows( mysqli_query($db, $consulta)) ;
-        $sql = "INSERT INTO mensaje VALUES ('$currentUser','$currentPartener','none',NOW(),'$mensaje','$nummensajes')";
+        $sql = "INSERT INTO mensaje VALUES ('$currentUser','$currentPartener','none',NOW(),'$mensaje','')";
         $result= mysqli_query($db, $sql);
-       if (!$result){
-        echo "<script>alert('pene')</script>";
-       }
+       
         mysqli_close($db);         
   }
 ?>
