@@ -1,6 +1,8 @@
 <?php
   session_start();
-
+  if(!isset($_SESSION['CurrentUser'])){
+     header("Location: error.php");  
+  }
     if(isset($_POST["mensaje"])){  
 
         $db  = mysqli_connect('localhost','root','','abd_practica');
@@ -34,7 +36,6 @@
 
   
   <link href="styles/sb-admin.css" rel="stylesheet">
-  <script src="js/scripts.js"></script>
 
     <title>Chat General</title>
     <meta charset="UTF-8">

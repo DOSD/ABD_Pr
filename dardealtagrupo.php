@@ -1,6 +1,14 @@
 <?php
   session_start();
-
+  //si un usuario intenta entrar en pagina escribiendo en URL , si no ha iniciado sesion le dará error además  
+    // si un usuario logueado no ADMIN intetna ir a  menú de administración le saltara otro error  
+  if(!isset($_SESSION['CurrentUser'])){
+     header("Location: error.php");  
+  }
+  else if($_SESSION['CurrentUser'] != "ADMIN"){
+      header("Location: erroradmin.php");  
+  }
+  }
   $db  = mysqli_connect('localhost','root','','abd_practica');
 
             if(isset($_POST["nombre"]) && isset($_POST ["genero"]) && isset($_POST ["edadminima"]) && isset($_POST ["edadmaxima"])){
@@ -33,7 +41,6 @@
 
   
   <link href="styles/sb-admin.css" rel="stylesheet">
-  <script src="js/scripts.js"></script>
 
     <title>Administración</title>
     <meta charset="UTF-8">

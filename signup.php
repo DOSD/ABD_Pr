@@ -72,7 +72,7 @@
     <h2>Bienvenido a Melomanía</h2>
 
     <div class="input-group">
-                <span class="input-group-addon"><i class="glyphicon glyphicon-font" data-toggle="tooltip" data-original-title="EL nombre debe ser  ..." ></i></span>
+                <span class="input-group-addon"><i class="glyphicon glyphicon-font" ></i></span>
                 <input type="text" placeholder="Nombre" name="nombre" id="nombre">
     </div>
 

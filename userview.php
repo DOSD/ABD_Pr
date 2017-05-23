@@ -1,8 +1,12 @@
 <?php
+  
   session_start();
+  //si un usuario intenta entrar en pagina escribiendo en URL , si no ha iniciado sesion le dará error!
+  if(!isset($_SESSION['CurrentUser'])){
+     header("Location: error.php");  
+  }
+
 ?>
-
-
 <!DOCTYPE html>
 <html lang="es">
 
@@ -14,7 +18,7 @@
 
   
   <link href="styles/sb-admin.css" rel="stylesheet">
-  <script src="js/scripts.js"></script>
+ 
 
     <title>Melomanía</title>
     <meta charset="UTF-8">
@@ -126,25 +130,30 @@
 
                  <div class="center">
                     <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-                        <div class="circle-img img-circle">
+                        <div class="circle-img img-circle centerdiv">
                           <img src="img/chatgeneral.png" >
                         </div>
                         <br>
-                          <p>Aqui ira texto de la descripcion del chat general</p>
+                          <p class="centertext">Puedes intercambiar mensajes con todos los usuarios 
+                                de la página yendote a "Chat general" </p>
                     </div>
                     <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-                        <div class="circle-img img-circle">
+                        <div class="circle-img img-circle centerdiv">
                           <img src="img/chatgrupal.jpeg" >
                         </div>
                         <br>
-                          <p>Aqui ira texto de la descripcion del chat grupal</p>
+                          <p class="centertext">Vas a poder mandar mensajes a grupos que conicidan con tu gusto musical si estas en el rango
+                                de edad que comprenden esos grupos.Puedes ver tus grupos pinchando en "Mis grupos"
+                          </p>
                     </div>
                     <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4  ">
-                        <div class="circle-img img-circle">
+                        <div class="circle-img img-circle centerdiv">
                           <img src="img/cahtprivado.png" >
                         </div>
                         <br>
-                          <p>Aqui ira texto de la descripcion del chat privado</p>
+                          <p class="centertext">También tienes la opción  de chatear en privado con los usuarios
+                            registrados en nuestra plataforma escogiendo un usuario en "Chat privado"
+                          </p>
                     </div>
                 </div>
                 <!-- /.row -->

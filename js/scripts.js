@@ -1,3 +1,4 @@
+
 // Expresión para validar email
 validemail = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
 
@@ -14,16 +15,6 @@ function validaRegistro(form) {
    }
 
    if (form.password.value != "" && form.confirmpassword.value != "") {
-
-        // Validar el tamaño de la contraseña
-        if (form.password.value.length < 3) {
-          alert('La contraseña debe tener al menos 4 caracteres. Por favor, inténtelo de nuevo.');
-          form.password.focus();
-          return false;
-        }
-
-        // Validar composición de la contraseña
-        
 
         // Validar contraseña y confirmación de la contraseña
         if (form.password.value != form.confirmpassword.value){
@@ -58,10 +49,4 @@ function validaRegistro(form) {
     // Si todo ha ido bien, enviar el formulario.
     form.submit();
 }
-
-$(document).ready(function(){
-    $('[data-toggle="tooltip"]').tooltip({
-        placement :  'left'
-    });
-});
 

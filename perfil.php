@@ -1,5 +1,8 @@
 <?php
   session_start();
+  if(!isset($_SESSION['CurrentUser'])){
+     header("Location: error.php");  
+  }
 ?>
 
 
@@ -14,7 +17,7 @@
 
   
   <link href="styles/sb-admin.css" rel="stylesheet">
-  <script src="js/scripts.js"></script>
+
 
     <title>Melomanía</title>
     <meta charset="UTF-8">

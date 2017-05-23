@@ -1,5 +1,9 @@
 <?php 
-        session_start();
+      //destruir cualquier sesión inciada anteriormente al ir al index  o desloguearte 
+      session_start();
+      session_destroy();
+      //iniciar una nueva sesion
+      session_start();
 
         //Conecction to Data Base
         $db  = mysqli_connect('localhost','root','','abd_practica');
@@ -23,7 +27,7 @@
                       //Loged in  succesfuly
                       $_SESSION['CurrentUser'] = $usuario;
                       if($usuario != "ADMIN"){
-                        header("Location: userview.php");  
+                        header("Location: userview.php");
                       }
                       else{
                         header("Location: adminview.php");  
@@ -55,7 +59,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
   <link rel="stylesheet" type="text/css" href="styles/style.css">
-  <script src="js/scripts.js" type="text/javascript"></script>
+
 
     <title>Formulario de login</title>
     <meta charset="UTF-8">
@@ -71,7 +75,7 @@
     <h2>Bienvenido a Melomanía</h2>
       <div class="input-group">
                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                       <input type="text" placeholder="Usuario" name="usuario" id="usuario" required="required">
+                       <input type="text" placeholder="Usuario" name="usuario" id="usuario" required="required" autofocus>
       </div>
 
       <br width="50%"> <!-- salto de linea -->
